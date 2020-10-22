@@ -1,0 +1,374 @@
+.time-panel {
+    background-color: var(--fff);
+    filter: drop-shadow(5px 5px 14px #0002);
+    border-radius: 10px;
+    display: flex;
+}
+
+.time-panel-inner {
+    padding: 15px;
+    display: flex;
+    width: 100%;
+}
+
+.thetime {
+    margin-left: auto;
+    text-align: right;
+}
+
+.large {
+    font-size: 25px;
+    font-weight: 800;
+    color: var(--accent);
+}
+
+.small {
+    color: var(--accent);
+    opacity: 0.5;
+}
+
+.main-content {
+    padding: 100px;
+    padding-top: 50px;
+}
+
+@media (max-width:960px) {
+    .main-content {
+        padding: 25px;
+        padding-top: 25px;
+    }
+}
+
+.welcome {
+    margin-bottom: 5px;
+}
+
+.welcomeback {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.utctime {
+    color: var(--accent);
+    opacity: 0.5;
+    font-size: 25px;
+    line-height: 25px;
+}
+
+.times {
+    margin-top: 25px;
+}
+
+.time-panel {
+    margin-bottom: 18px;
+}
+
+@media (max-width:460px) {
+    .welcomeback {
+        font-size: 30px;
+    }
+    .utctime {
+        color: var(--accent);
+        opacity: 0.5;
+        font-size: 20px;
+        line-height: 25px;
+    }
+}
+
+.welcome {
+    display: flex;
+}
+
+.right {
+    margin-left: auto;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: stretch;
+    display: flex;
+}
+
+.add {
+    font-size: 30px;
+    color: var(--accent);
+}
+
+.edit {
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    display: flex;
+    background-color: var(--accent);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.editbut {
+    padding: 10px;
+    color: var(--fff) !important;
+}
+
+.popup {
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background-color: #000a;
+    z-index: 200;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.2s cubic-bezier(0, .23, 0, .93);
+    transform: scale(1.1);
+}
+
+.open {
+    pointer-events: all;
+    opacity: 1;
+    transform: scale(1.0);
+}
+
+.popup-inner {
+    background-color: var(--fff2);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.header {
+    color: var(--accent);
+    border-left: 6px solid var(--accent);
+    padding-left: 10px;
+    font-weight: 900;
+    font-size: 35px;
+}
+
+.range-cont {
+    display: flex;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-size: 20px;
+    color: var(--accent);
+    font-weight: 700;
+    padding-top: 10px;
+}
+
+.label2 {
+    font-size: 20px;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.range-value {
+    font-size: 20px;
+    color: var(--accent);
+    padding-right: 8px;
+    font-weight: 700;
+    margin-left: auto;
+}
+
+.label-cont {
+    padding-top: 10px;
+}
+
+[type='range'] {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 1.5em;
+    background: transparent;
+    font: 1em/1 arial, sans-serif;
+    margin-left: auto;
+}
+
+[type='range'],
+[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+
+[type='range']::-webkit-slider-runnable-track {
+    box-sizing: border-box;
+    border: none;
+    width: 100%;
+    height: 0.25em;
+    background: var(--accent);
+    filter: drop-shadow(3px 3px 7px #0003);
+}
+
+[type='range']::-moz-range-track {
+    box-sizing: border-box;
+    border: none;
+    width: 100%;
+    height: 0.25em;
+    background: var(--accent);
+    filter: drop-shadow(3px 3px 7px #0003);
+    z-index: 49;
+}
+
+[type='range']::-ms-track {
+    box-sizing: border-box;
+    border: none;
+    width: 12.5em;
+    height: 0.25em;
+    background: var(--accent);
+    filter: drop-shadow(3px 3px 7px #0003);
+    z-index: 49;
+}
+
+[type='range']::-webkit-slider-thumb {
+    margin-top: -0.625em;
+    box-sizing: border-box;
+    border: none;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    background: var(--accent);
+    z-index: 49;
+}
+
+[type='range']::-moz-range-thumb {
+    box-sizing: border-box;
+    border: none;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    background: var(--accent);
+    z-index: 50;
+}
+
+[type='range']::-ms-thumb {
+    margin-top: 0;
+    box-sizing: border-box;
+    border: none;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    background: #f90;
+}
+
+[type='range']::-ms-tooltip {
+    display: none;
+}
+
+.range-cont {
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.label-cont {
+    display: flex;
+    align-items: center;
+}
+
+
+/* The switch - the box around the slider */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 43px;
+    height: 24px;
+}
+
+
+/* Hide default HTML checkbox */
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+/* The slider */
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--fff);
+    filter: drop-shadow(3px 3px 7px #0003);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--accent);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: var(--accent);
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(19px);
+    -ms-transform: translateX(19px);
+    transform: translateX(19px);
+    background-color: var(--fff);
+}
+
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.switchcont {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.switch {
+    margin-left: auto;
+}
+
+.switchlabel {
+    font-size: 20px;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.closeb {
+    font-size: 30px;
+    color: #fff;
+}
+
+.close {
+    position: fixed;
+    top: 110px;
+    left: 25px;
+}

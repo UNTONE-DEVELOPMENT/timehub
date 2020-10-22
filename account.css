@@ -1,0 +1,130 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--fff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ppanel-main {
+    filter: drop-shadow(5px 5px 15px #0003);
+    background-color: var(--fff2);
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    border-radius: 20px;
+    animation: 0.5s cubic-bezier(0, .23, 0, .93) 0s 1 load;
+}
+
+@media (max-width:960px) {
+    .ppanel-main {
+        flex-direction: column;
+        justify-items: stretch;
+        width: 70%;
+    }
+    .right {
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        width: auto !important;
+    }
+}
+
+@media (max-width:560px) {
+    .ppanel-main {
+        flex-direction: column;
+        justify-items: stretch;
+        width: 80%;
+    }
+}
+
+@media (max-width:960px) {}
+
+@keyframes load {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.left {
+    width: 50%;
+    background-color: var(--accent);
+    border-radius: 20px 0px 0px 20px;
+}
+
+.right {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+}
+
+.right-text {
+    font-weight: 900;
+    color: var(--accent);
+}
+
+.right-text-2 {
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--accent);
+}
+
+.login-input {
+    padding: 7px;
+    border-radius: 5px;
+    color: var(--accent);
+    border: 0px;
+    background-color: var(--fff);
+    filter: drop-shadow(3px 3px 12px #0003);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-header {
+    padding-top: 10px;
+    color: var(--accent);
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.form {}
+
+.divider {
+    width: 100%;
+    height: 2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: var(--accent);
+    opacity: 0.3;
+}
+
+.abutton {
+    padding: 7px;
+    border-radius: 5px;
+    color: var(--accent);
+    border: 0px;
+    background-color: var(--fff);
+    filter: drop-shadow(3px 3px 12px #0003);
+    margin-top: 25px;
+}
+
+.dont {
+    font-size: 15px;
+    font-weight: 800;
+    margin-top: 20px;
+    color: var(--accent) !important;
+}
+
+a {
+    color: var(--accent);
+}

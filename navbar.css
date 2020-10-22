@@ -1,0 +1,45 @@
+.navbar {
+    background-color: var(--accent);
+    padding: 20px;
+    box-sizing: border-box;
+    filter: drop-shadow(5px 5px 10px #0002);
+    display: flex;
+}
+
+.user {
+    margin-left: auto;
+    color: white !important;
+}
+
+.navbar-inner {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.username {
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.time {
+    font-weight: 900;
+}
+
+.hub {
+    font-weight: normal;
+}
+
+.logo-text {
+    color: white;
+    font-size: 30px;
+}
+
+.login {
+    padding: 8px 12px;
+    border-radius: 5px;
+    background-color: white;
+    color: var(--accent) !important;
+    margin-left: auto;
+    text-decoration: none;
+}

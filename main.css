@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@font-face {
+    font-family: FontAwesomeExtra;
+    src: url(fa-extra.woff2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    scrollbar-width: thin !important;
+    scrollbar-color: var(--accent) #ddd;
+    font-family: 'Roboto', arial;
+    --accent: #3d49ec;
+    --accenttrans: #3d49ec;
+    --accenttranser: #3d49ec;
+    --panelbg: #fefefe;
+    --ddd: #ddd;
+    --eee: #eee;
+    --fff: #fff;
+    --fff2: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #666;
+    background-color: var(--eee);
+}
+
+.oui-button {
+    font: inherit;
+    color: inherit;
+    border-radius: 0;
+    display: inline-block;
+    padding: 0 30px;
+    font-size: .875rem;
+    line-height: 38px;
+    border-radius: 8px;
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+    background-color: var(--accenttrans);
+    filter: drop-shadow(0px 0px 5px #00000022);
+    transform: scale(1);
+    transition: all 0.4s cubic-bezier(0, .23, 0, .93);
+}
+
+.oui-b-dark {
+    background-color: var(--accenttranser) !important;
+    color: white;
+    filter: drop-shadow(0px 0px 5px var(--accent)) !important;
+}
+
+.oui-b-dark:hover {
+    background-color: var(--accent) !important;
+    color: white;
+    filter: drop-shadow(0px 0px 5px var(--accent)) !important;
+}
+
+.oui-b-light {
+    background-color: #fffd !important;
+    color: var(--accent);
+}
+
+.oui-b-light:hover {
+    background-color: var(--fff) !important;
+    color: var(--accent);
+    filter: drop-shadow(0px 0px 5px #FFFFFF) !important;
+}
+
+.oui-button:hover {
+    background-color: var(--accent);
+    filter: drop-shadow(0px 0px 5px var(--accent));
+    transform: scale(1.01);
+    transition: all 0.2s cubic-bezier(0, .23, 0, .93);
+}
+
+.oui-button:active {
+    background-color: var(--accent);
+    filter: drop-shadow(0px 0px 3px var(--accent));
+    transform: scale(1.05);
+    transition: all 0.2s cubic-bezier(0, .23, 0, .93);
+}
+
+.oui-b-right {
+    float: right !important;
+    margin-left: auto;
+}
+
+.oui-navbar {
+    display: flex;
+    position: relative;
+    min-height: 61px;
+    background-color: var(--accent) !important;
+    box-shadow: 0px 0px 15px #00000044;
+    width: 100%;
+    align-items: center;
+    position: sticky;
+    position: fixed;
+    z-index: 50000;
+}
+
+.oui-nav-inner {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.oui-navlogo {
+    height: 35px !important;
+    padding: 0;
+    margin: 0;
+    margin-top: 8px !important;
+    margin-right: 2px;
+}
+
+@keyframes slideup {
+    0% {
+        transform: translateY(10%) scale(0.95) scaleY(95%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slidedown {
+    0% {
+        transform: translateY(-100%) scale(0.9);
+        opacity: 0;
+        border-radius: 100px;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+.oui-panelscroller {
+    width: 900px;
+    margin: auto;
+    animation: 0.4s cubic-bezier(0, .23, 0, .93) 0s 1 slideup;
+    -webkit-transition: all 0.4s cubic-bezier(0, .23, 0, .93) !important;
+    margin-bottom: 50px;
+    padding-top: 80px;
+}
+
+@media (max-width:960px) {
+    .oui-panelscroller {
+        width: 700px;
+        transition: all 0.2s cubic-bezier(0, .23, 0, .93);
+    }
+}
+
+@media (max-width:740px) {
+    .oui-panelscroller {
+        width: 95%;
+        transition: all 0.2s cubic-bezier(0, .23, 0, .93);
+    }
+}
+
+.oui-paneloutside {
+    margin-top: 15px;
+}
+
+.oui-p-header {
+    color: var(--accent);
+    margin: 0;
+    padding: 0;
+    font-size: 32px;
+}
+
+.oui-p-subheader {
+    color: var(--accent);
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    line-height: 10px;
+    margin-bottom: 30px;
+}
+
+.oui-panel {
+    width: 100%;
+    background-color: var(--panelbg);
+    border-radius: 10px;
+    filter: drop-shadow(0px 0px 10px #0003);
+    transition: all 0.2s cubic-bezier(0, .23, 0, .93);
+    margin-top: 0px;
+    min-height: 50px !important;
+}
+
+.oui-panel-insidecont {
+    padding: 30px;
+    min-height: 50px !important;
+}
+
+.innercont {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.oui-radiocont {
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.oui-radiolabel {
+    color: var(--accent);
+    font-size: 20px;
+    font-weight: 800;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-20px);
+    position: relative !important;
+    top: 3px;
+}
+
+input[type="radio"]:checked+label .oui-radiobutton-on {
+    opacity: 1;
+    background-color: var(--accent);
+    transform: scale(1);
+    transition: all 0.2s cubic-bezier(0, .23, 0, .93);
+    filter: drop-shadow(0px 0px 4px var(--accent));
+}
+
+input[type="checkbox"]:checked+label .oui-radiobutton-on {
+    opacity: 1;
+    background-color: var(--accent);
+    transform: scale(1);
+    transition: all 0.2s cubic-bezier(0, .23, 0, .93);
+    filter: drop-shadow(0px 0px 4px var(--accent));
+}
+
+.oui-flex {
+    display: flex;
+}
+
+.oui-textbox {
+    padding: 8px;
+    border: none;
+    background-color: var(--fff);
+    filter: drop-shadow(3px 3px 7px #0003);
+    border: 1px solid #eee;
+    color: var(--accent);
+    border-radius: 8px;
+    font-size: 16px;
+    width: 50%;
+    font-weight: 800;
+    font-family: "Roboto";
+    display: inline;
+    vertical-align: middle;
+    transition: all 0.2s cubic-bezier(0, .23, 0, .93);
+    border: 0px !important;
+}
+
+.oui-dropdown {
+    padding: 8px;
+    border: none;
+    background-color: var(--fff);
+    filter: drop-shadow(5px 5px 6px #00000012) drop-shadow(-5px -5px 6px #ABABAB12);
+    border: 1px solid #eee;
+    color: var(--accent);
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 800;
+    font-family: "Roboto";
+    display: inline;
+    vertical-align: middle;
+    transition: all 0.2s cubic-bezier(0, .23, 0, .93);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Remove default arrow */
+}
+
+.oui-textbox:focus {
+    background-color: var(--fff);
+    filter: drop-shadow(0 0 6px var(--accent));
+    color: var(--accent);
+    transition: all 0.2s cubic-bezier(0, .23, 0, .93);
+}
+
+.oui-textbox-100 {
+    width: 100%;
+}
+
+.oui-textbox-label {
+    color: var(--accent);
+    font-size: 25px !important;
+    padding-right: 10px;
+    font-weight: 800;
+    width: auto;
+    display: inline;
+    margin-top: 5px;
+    vertical-align: middle;
+}
+
+.oui-tbcontainer {
+    display: inline;
+}
+
+.oui-footer {
+    display: flex;
+    position: absolute;
+    min-height: 61px;
+    background-color: var(--accent) !important;
+    box-shadow: 0px 0px 15px #00000044;
+    width: 100%;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+.osekai-copy {
+    color: white;
+    font-size: 20px;
+    padding-top: 8px;
+    margin-left: 12px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.oui-table-header-tr {
+    display: flex;
+    table-layout: fixed;
+    margin-bottom: 0px;
+    color: var(--accent);
+}
+
+.oui-table-header-th {
+    width: 100%;
+    text-align: left;
+    border-bottom: 0px solid black;
+    padding: 5px;
+    background-color: none;
+}
+
+.oui-table-tr {
+    display: flex;
+    table-layout: fixed;
+    margin-bottom: 5px;
+    color: var(--accent);
+}
+
+.oui-table-td {
+    width: 100%;
+    text-align: left;
+    border-bottom: 0px solid black;
+    padding: 5px;
+    background-color: var(--eee);
+    display: flex;
+    align-items: center;
+}
+
+.oui-table {
+    border-collapse: separate;
+    border-spacing: 0 0px;
+}
+
+table {
+    width: 100%;
+}
+
+.oui-table-td:first-child {
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.oui-table-td:last-child {
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+    html,
+    body {
+        background-color: #121212;
+        --panelbg: #222222;
+        --ddd: #333;
+        --eee: #222222;
+        --fff: #1a1a1a;
+        --fff2: #121212;
+    }
+    .oui-navbar {
+        background-color: var(--eee) !important;
+    }
+}
+
+*:focus,
+*:focus,
+*:focus {
+    outline: none;
+}
+
+.nevermind {
+    color: var(--accent);
+    align-self: center;
+    justify-self: center;
+    font-size: 15px;
+    padding-top: 5px;
+    opacity: 0.7;
+}
