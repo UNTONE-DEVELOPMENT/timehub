@@ -1,5 +1,8 @@
 RewriteEngine On
 
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /user\.php\?u=([^\&\ ]+)
+RewriteRule ^/?u\.php$ /u/%1? [L,R=301]
+
 
 RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule !.*\.php$ %{REQUEST_FILENAME}.php [QSA,L]

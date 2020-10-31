@@ -138,6 +138,7 @@
     background-color: var(--fff2);
     padding: 20px;
     border-radius: 20px;
+    min-width: 400px;
 }
 
 .header {
@@ -371,4 +372,24 @@ input:checked+.slider:before {
     position: fixed;
     top: 110px;
     left: 25px;
+}
+
+.warning {
+    background-color: #0000;
+    color: red;
+    border: 1px solid red;
+}
+
+.warning:hover {
+    background-color: red;
+    color: white;
+    filter: none;
+}
+
+.submit {
+    margin-top: 20px;
+}
+
+.delete {
+    margin-top: 10px;
 }
