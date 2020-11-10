@@ -91,4 +91,7 @@ if (isset($_POST['email'])) {
             <p class="dont">Don't have an account? <a href="register">Why not register one?</a></p>
         </div>
     </div>
+    <div class="login-footer">
+        <p class="lf-copyright">© UNTONE, Hubz 2020</p>
+    </div>
 </body>

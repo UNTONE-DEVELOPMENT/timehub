@@ -121,4 +121,7 @@ if (isset($_POST['password'])) {
             <p class="dont">Already have an account? <a href="login">Log In</a></p>
         </div>
     </div>
+    <div class="login-footer">
+        <p class="lf-copyright">© UNTONE, Hubz 2020</p>
+    </div>
 </body>
