@@ -378,10 +378,26 @@ input:checked+.slider:before {
     background-color: #0000;
     color: red;
     border: 1px solid red;
+    width: 47.5%;
+    flex-grow: 0.5;
 }
 
 .warning:hover {
     background-color: red;
+    color: white;
+    filter: none;
+}
+
+.boredered {
+    background-color: #0000;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    width: 47.5%;
+    text-align: center;
+}
+
+.boredered:hover {
+    background-color: var(--accent);
     color: white;
     filter: none;
 }
@@ -392,4 +408,17 @@ input:checked+.slider:before {
 
 .delete {
     margin-top: 10px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.delete-nevermind {
+    width: 100%;
+    display: flex;
+    flex-grow: 4;
+    justify-content: space-between;
 }

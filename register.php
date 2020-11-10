@@ -2,6 +2,9 @@
 $category = "account";
 $site = "login";
 
+ini_set('session.gc_maxlifetime', 694201337);
+session_set_cookie_params(694201337);
+
 session_start();
 
 

@@ -2,6 +2,10 @@
 $category = "page";
 $site = "times";
 
+
+ini_set('session.gc_maxlifetime', 694201337);
+session_set_cookie_params(694201337);
+
 session_start();
 
 include("generic.php");
@@ -100,7 +104,10 @@ function createe() {
             </form>
             <form action="/delete" method="post">
                 <input type="hidden" id="id2" name="id" value="-1">
-                <input class="oui-button warning delete submit" type="submit" value="Delete">
+                <div class="delete-nevermind">
+                    <input class="oui-button warning delete submit" type="submit" value="Delete">
+                    <button class="oui-button boredered delete submit" onclick="editzone(0,0); return false;" type="button">Cancel</button>
+                </div>
             </forM>
         </div>
     </div>
@@ -133,9 +140,11 @@ function createe() {
             ?>
             <div class="time-panel" id="time">
                 <div class="time-panel-inner">
-                    <div calss="info">
+                    <div class="info">
                         <p class="name large"><?php echo $name; ?></p>
+                        <?php if($desc != ""){ ?>
                         <p class="desc small"><?php echo $desc; ?></p>
+                        <?php } ?>
                     </div>
                     <div class="thetime">
                         <p class="time large paneltime" offset="<?php echo $offset; ?>">Loading...</p>
@@ -154,8 +163,10 @@ function createe() {
             </div>
             <?php } ?>
         </div>
+        <div class="footer">
+            <p class="footer-text">© UNTONE & Hubz, 2020</p>
+        </div>
     </div>
-
 </body>
 
 <script>
