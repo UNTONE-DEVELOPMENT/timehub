@@ -118,6 +118,9 @@ if (isset($_POST['password'])) {
                 <input class="login-input" type="password" id="password" name="password">
                 
                 <input type="submit" class="abutton" href="e" value="Sign Up">
+                <p style="font-size: 10px; color: var(--accent);">
+                By registering, you agree to the <a href="privacy.html">Privacy Policy</a>
+                </p>
 
                 <p style="color: red; margin-top: 4px;"><?php echo $_SESSION['success'];?></p>
             </form>
